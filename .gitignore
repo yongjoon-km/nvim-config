@@ -1,2 +1,3 @@
 # compiled by packer.nvim
 plugin/packer_compiled.lua
+lazy-lock.json
