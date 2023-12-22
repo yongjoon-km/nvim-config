@@ -1,3 +1,3 @@
-require('mapping')
-require('config')
+require('yongjoon.keymap')
+require('yongjoon.config')
 require('yongjoon.lazy')

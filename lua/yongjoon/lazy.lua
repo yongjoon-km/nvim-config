@@ -12,9 +12,6 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup("yongjoon.plugins", {
---  install = {
---    colorscheme = { "nightfly" },
---  },
   checker = {
     -- automatically check for plugin updates
     enabled = true,
