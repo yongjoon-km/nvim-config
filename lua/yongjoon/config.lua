@@ -20,3 +20,6 @@ vim.opt.colorcolumn = "80"
 vim.opt.guicursor = ""
 
 vim.opt.termguicolors = true
+
+-- disable swapfile
+vim.opt.swapfile = false
