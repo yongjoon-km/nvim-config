@@ -11,7 +11,7 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup("yongjoon.plugins", {
+require("lazy").setup("yongjoon.lazy.plugins", {
   checker = {
     -- automatically check for plugin updates
     enabled = true,

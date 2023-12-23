@@ -1,3 +1,2 @@
-require('yongjoon.keymap')
-require('yongjoon.config')
+require('yongjoon.neovim')
 require('yongjoon.lazy')
