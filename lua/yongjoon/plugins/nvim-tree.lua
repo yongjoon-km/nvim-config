@@ -20,9 +20,8 @@ return {
     -- set keymaps
     local keymap = vim.keymap -- for conciseness
 
-    keymap.set("n", "<leader>ee", "<cmd>NvimTreeToggle<CR>", {})
-    keymap.set("n", "<leader>ef", "<cmd>NvimTreeFindFileToggle<CR>", {})
-    keymap.set("n", "<leader>ec", "<cmd>NvimTreeCollapse<CR>", {})
-    keymap.set("n", "<leader>er", "<cmd>NvimTreeRefresh<CR>", {})
+    keymap.set("n", "<leader>nn", "<cmd>NvimTreeToggle<CR>", {})
+    keymap.set("n", "<leader>nf", "<cmd>NvimTreeFindFileToggle<CR>", {})
+    keymap.set("n", "<leader>nr", "<cmd>NvimTreeRefresh<CR>", {})
   end,
 }
