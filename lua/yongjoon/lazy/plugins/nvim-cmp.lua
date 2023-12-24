@@ -16,6 +16,7 @@ return {
 
     local lspkind = require("lspkind")
 
+    --[[
     local s = luasnip.snippet
     local sn = luasnip.snippet_node
     local t = luasnip.text_node
@@ -200,6 +201,8 @@ return {
         }),
     }, { key = "java" })
 
+    --]]
+
     -- loads vscode style snippets from installed plugins (e.g. friendly-snippets)
     require("luasnip.loaders.from_vscode").lazy_load()
 
@@ -223,7 +226,7 @@ return {
       }),
       -- sources for autocompletion
       sources = cmp.config.sources({
---        { name = "nvim_lsp" },
+        { name = "nvim_lsp" },
         { name = "luasnip" }, -- snippets
         { name = "buffer" }, -- text within current buffer
         { name = "path" }, -- file system paths
