@@ -6,6 +6,7 @@ return {
 		"williamboman/mason.nvim",
 		"williamboman/mason-lspconfig.nvim",
 	},
+
 	config = function()
 		local on_attach = function(_, bufnr)
 			-- key mapping
@@ -39,32 +40,8 @@ return {
 		local mason_lspconfig = require("mason-lspconfig")
 		mason_lspconfig.setup({
 			ensure_installed = {
-				"tsserver",
 				"lua_ls",
 			},
-		})
-
-		mason_lspconfig.setup_handlers({
-			function(server_name)
-				lspconfig[server_name].setup({
-					capabilities = capabilities,
-					on_attach = on_attach,
-				})
-			end,
-			["lua_ls"] = function()
-				lspconfig["lua_ls"].setup({
-					capabilities = capabilities,
-					on_attach = on_attach,
-					-- treat vim as global object
-					settings = {
-						Lua = {
-							diagnostics = {
-								globals = { "vim" },
-							},
-						},
-					},
-				})
-			end,
 		})
 	end,
 }
