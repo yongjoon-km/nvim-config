@@ -25,3 +25,7 @@ return {
     keymap.set("n", "<leader>nr", "<cmd>NvimTreeRefresh<CR>", {})
   end,
 }
+
+-- normal H toggles dotfiles
+-- normal I toggles gitignore
+
