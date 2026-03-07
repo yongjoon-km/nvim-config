@@ -1,12 +1,12 @@
 return {
     "nvim-treesitter/nvim-treesitter",
+    branch = "main",
     build = ":TSUpdate",
     dependencies = {
         "nvim-treesitter/nvim-treesitter-context",
-        "nvim-treesitter/playground"
     },
     config = function()
-        local configs = require("nvim-treesitter.configs")
+        local configs = require("nvim-treesitter")
         configs.setup({
             ensure_installed = {
                 "java",
