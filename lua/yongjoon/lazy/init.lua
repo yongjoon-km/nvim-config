@@ -84,3 +84,16 @@ vim.api.nvim_create_autocmd("CursorHold", {
 })
 
 vim.opt.updatetime = 500
+
+-- Colorscheme toggle: catppuccin <-> 256noir
+local schemes = { "catppuccin-macchiato", "off", "atlas", "accent" }
+local current = 2
+
+local scheme = schemes[current]
+vim.cmd("colorscheme " .. scheme)
+vim.keymap.set("n", "<leader>tt", function()
+  current = (current % #schemes) + 1
+  local scheme = schemes[current]
+  vim.cmd("colorscheme " .. scheme)
+  vim.notify("colorscheme: " .. scheme, vim.log.levels.INFO)
+end, { desc = "Toggle colorscheme" })
