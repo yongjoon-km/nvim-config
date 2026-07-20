@@ -28,6 +28,15 @@ require("lazy").setup("yongjoon.lazy.plugins", {
 vim.lsp.enable('rust_analyzer')
 vim.lsp.enable('lua_ls')
 
+-- ts lsp
+vim.lsp.config("ts_ls", {
+    cmd = { 'typescript-language-server', '--stdio' },
+    filetypes = { 'typescript', 'javascript', 'typescriptreact', 'javascriptreact' },
+    root_markers = { 'tsconfig.json', 'package.json' },
+})
+
+vim.lsp.enable('ts_ls')
+
 -- c lsp
 vim.lsp.config("clangd", {
     cmd = {
@@ -86,8 +95,8 @@ vim.api.nvim_create_autocmd("CursorHold", {
 vim.opt.updatetime = 500
 
 -- Colorscheme toggle: catppuccin <-> 256noir
-local schemes = { "catppuccin-macchiato", "off", "atlas", "accent" }
-local current = 2
+local schemes = { "gruvbox", "catppuccin-macchiato", "off", "atlas", "accent" }
+local current = 1
 
 local scheme = schemes[current]
 vim.cmd("colorscheme " .. scheme)
