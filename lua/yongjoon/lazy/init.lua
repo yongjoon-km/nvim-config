@@ -43,7 +43,7 @@ vim.lsp.config("clangd", {
         "clangd",
         "--background-index",
     },
-    filetypes = { 'c' },
+    filetypes = { 'c', 'cpp', 'objc', 'objcpp', 'cuda', 'proto' },
     root_markers = { ".clangd", "compile_commands.json", "compile_flags.txt", ".git" },
 })
 
