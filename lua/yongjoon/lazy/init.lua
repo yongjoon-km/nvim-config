@@ -43,6 +43,7 @@ vim.lsp.config("clangd", {
         "clangd",
         "--background-index",
     },
+    filetypes = { 'c' },
     root_markers = { ".clangd", "compile_commands.json", "compile_flags.txt", ".git" },
 })
 
@@ -82,7 +83,7 @@ vim.lsp.config("ruff", {
     },
 })
 
-vim.lsp.enable("ruff")
+-- vim.lsp.enable("ruff")
 
 -- vim diagnostic hover setup
 vim.api.nvim_create_autocmd("CursorHold", {
